@@ -18,22 +18,24 @@ img{
     width:100%;
     height:100%;
 }
+/* #section1{
+    padding-top: 350px;
+} */
 #section1,#section3{
     background-color:var(--veryLightGray);
 }
 #section2{
     background-color: var(--lightGrayishBlue);
 }
-section{
+section,footer{
     overflow-x:hidden;
     height: auto;
-    padding:50px 0px;
+}
+#section1 .container{
+    padding-top: 270px;
 }
 #section2 .container{
     gap:40px;
-}
-.container{
-    flex-direction: column;
 }
 body{
     width:100%;
@@ -50,12 +52,16 @@ p{
 nav,main,footer,section{
     width:100%;
     height: auto;
+    position: relative;
 }
 main{
     background-color: var(--veryLightGray);
 }
 footer{
     background-color: var(--darkBlue);
+}
+footer .container{
+    gap:40px;
 }
 nav{
     height:auto;
@@ -65,15 +71,57 @@ nav{
     z-index:10;
 }
 .container{
+    flex-direction: column;
     display:flex;
-    padding:0px 25px;
+    padding:70px 20px;
     width:100%;
     height: auto;
     justify-content: center;
 }
-#logo-socials{
+.logo-socials{
     width:100%;
-    height:100px;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+#socials{
+    width:100%;
+    height:50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+
+}
+.foot-logo{
+    width:100%;
+    padding:0px 80px;
+}
+.links{
+    width:100%;
+    color:var(--grayishBlue);
+    display:flex;
+    font-weight: 700;
+    flex-direction:column;
+    gap:15px;
+    font-size:1.2rem;
+    align-items: center;
+}
+.btn-copy{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap:20px;
+    flex-direction:column;
+    color:var(--grayishBlue)
+}
+ul{
+    list-style-type: none;
+}
+.social-link{
+    width:30px;
+    height:30px;
 }
 header{
     width:100%;
@@ -90,6 +138,7 @@ header h1{
     justify-content: center;
     align-items: center;
     overflow-x:hidden;
+    margin-bottom: 0px;
     font-size:40px;
 }
 h1{
@@ -110,10 +159,13 @@ h1,h3,h2{
     background:linear-gradient(120deg,var(--limeGreen),var(--brightCyan));
 }
 #image1{
+    top:0px;
+    left:0px;
     width:100%;
-    height:300px;
-    position: relative;
-    /* margin-bottom:10px; */
+    z-index:9;
+    height:280px;
+    background-color: red;
+    position:absolute;
     background-color: var(--veryLightGray);
 }
 #mobile-intro{
@@ -122,7 +174,7 @@ h1,h3,h2{
     background-repeat:no-repeat;
     background-size: cover;
     position: absolute;
-    background-position-y:-45px;
+    background-position-y:-110px;
     background-image: url("assets/images/bg-intro-mobile.svg");
 }
 #mock-up{
@@ -131,7 +183,7 @@ h1,h3,h2{
     background-repeat:no-repeat;
     background-size: cover;
     position: absolute;
-    background-position-y:-130px;
+    background-position-y:-200px;
     background-image:url("assets/images/image-mockups.png");
 }
 nav .container{
@@ -172,6 +224,9 @@ nav .container{
     align-items:flex-start;
     gap:0px;
     justify-content:flex-start ;
+    background-color:white;
+    border-radius:8px;
+    box-shadow:0px 0px 7px -5px black;
 }
 .card2 img{
     width:100%;
@@ -179,15 +234,72 @@ nav .container{
     border-top-left-radius:8px;
     border-top-right-radius:8px;
 }
+.card2 p{
+    text-align:left;
+    line-height: 1.2;
+    font-size:14px;
+}
+.card2 h1{
+    font-weight:500;
+    font-size:1rem;
+    text-align: left;
+    margin-bottom: 0px;
+}
+address{
+    font-style: normal;
+    font-size:0.8rem;
+    font-weight:700;
+    color:var(--grayishBlue);
+}
 #content2{
     width:100%;
     height:50%;
     border-bottom-left-radius:8px;
     border-bottom-right-radius:8px;
     background-color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    gap:10px;
+    padding:0px 20px;
 }
 @media screen and (max-width:350px){
     #image1{
         height:250px;
+    }
+    #section1 .container{
+        padding-top:240px;
+    }
+    header h1{
+        font-size:30px;
+    }
+    h1{
+        font-size:28px;
+    }
+}
+@media screen and (min-width:400px){
+    #section1 .container{
+        padding-top:340px;
+    }
+
+    #image1{
+        height:330px;
+    }
+}
+@media screen and (min-width:430px){
+    #mobile-intro{
+        background-position-y:-250px;
+    }
+    #mock-up{
+        background-position-y:-300px;
+    }
+}
+@media screen and (min-width:500px){
+    #mobile-intro{
+        background-position-y:-250px;
+        background-image:url("assets/images/bg-intro-desktop.svg");
+    }
+    #mock-up{
+        background-position-y:-300px;
     }
 }
