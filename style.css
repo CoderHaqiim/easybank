@@ -14,7 +14,6 @@
     --veryLightGray: hsl(0, 0%, 98%);
     --white: hsl(0, 0%, 100%);
     overflow-x: hidden;
-    height:min-content;
 }
 img{
     width:100%;
@@ -25,7 +24,6 @@ img{
     max-width:1600px;
     height: auto;
     position: absolute;
-    background-color: yellow;
     z-index:2;
 }
 /* #section1{
@@ -56,6 +54,7 @@ body{
     font-family: "Public Sans", sans-serif;
     overflow-x: hidden;
     position: relative;
+    background-color: var(--darkBlue);
 }
 p{
     font-size:0.9rem;
